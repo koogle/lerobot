@@ -247,7 +247,11 @@ def main():
     
     # Configuration for SO101 follower arm
     # Update the port to match your system (e.g., /dev/ttyACM0, /dev/ttyUSB0, COM3)
+    # Follower
     port = "/dev/tty.usbmodem5A7A0547071"  # UPDATE THIS TO YOUR PORT
+    # Leader
+    # port = "/dev/tty.usbmodem5A7A0590501"
+
     
     # Load calibration data
     calibration_path = Path.home() / ".cache/huggingface/lerobot/calibration/robots/so101_follower/jakob_follower_arm.json"
