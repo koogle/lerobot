@@ -248,11 +248,22 @@ def main():
     # Configuration for SO101 follower arm
     # Update the port to match your system (e.g., /dev/ttyACM0, /dev/ttyUSB0, COM3)
     # Follower
+    # name jakob_follower_arm
     port = "/dev/tty.usbmodem5A7A0547071"  # UPDATE THIS TO YOUR PORT
     # Leader
+    # name jfrick_s101_leader
     # port = "/dev/tty.usbmodem5A7A0590501"
+    # Teleop command
+    """
+    python -m lerobot.teleoperate \
+        --robot.type=so101_follower \
+        --robot.port=/dev/tty.usbmodem5A7A0547071 \
+        --robot.id=jakob_follower_arm \
+        --teleop.type=so101_leader \
+        --teleop.port=/dev/tty.usbmodem5A7A0590501 \
+        --teleop.id=jfrick_s101_leader
+    """
 
-    
     # Load calibration data
     calibration_path = Path.home() / ".cache/huggingface/lerobot/calibration/robots/so101_follower/jakob_follower_arm.json"
     calibration = {}
